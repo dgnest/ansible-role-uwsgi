@@ -4,6 +4,6 @@
 
 _uwsgi_templates:
     - src: "uwsgi.ini.j2"
-      dest: "{{ uwsgi_dir_home }}/uwsgi.ini"
+      dest: "{{ uwsgi_dir_home }}/{{ uwsgi_name }}.ini"
     - src: "uwsgi.sh.j2"
       dest: "{{ uwsgi_dir_home }}/uwsgi.sh"

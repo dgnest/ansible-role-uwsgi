@@ -1,7 +1,9 @@
 ---
 # defaults file for uwsgi
 
+uwsgi_name: "uwsgi"
 uwsgi_dir_home: "/home/{{ user }}"
+uwsgi_file_load_virtualenvwrapper: ""
 
 uwsgi_package_dependencies:
   - "libpcre3"

@@ -11,3 +11,11 @@
 - include: pip.yaml
 
 - include: environment.yaml
+
+- include: templates.yaml
+
+- include: configure.yaml
+
+- include: install.yaml
+
+- include: post_install.yaml
