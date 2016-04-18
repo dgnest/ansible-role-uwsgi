@@ -1,6 +1,8 @@
 ---
 # defaults file for uwsgi
 
+uwsgi_dir_home: "/home/{{ user }}"
+
 uwsgi_package_dependencies:
   - "libpcre3"
   - "libpcre3-dev"
@@ -11,6 +13,11 @@ uwsgi_dependencies:
   - name: "python-dev"
     version: ""
   - name: "python-pip"
+    version: ""
+
+uwsgi_package:
+  name: "uwsgi"
+  version: ""
 
 uwsgi_pip_dependencies:
   - name: "uWSGI"
