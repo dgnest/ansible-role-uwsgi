@@ -1,0 +1,18 @@
+---
+# defaults file for uwsgi
+
+uwsgi_package_dependencies:
+  - "wget"
+  - "curl"
+
+uwsgi_dependencies:
+  - name: "python2.7-dev"
+    version: ""
+  - name: "python-dev"
+    version: ""
+  - name: "python-pip"
+  - name: "git"
+
+uwsgi_pip_dependencies:
+  - name: "httplib2"
+    version: "0.7.7"
