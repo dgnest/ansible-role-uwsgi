@@ -1,0 +1,7 @@
+[uwsgi]
+
+{% if uwsgi_dict %}
+{% for key,value in uwsgi_dict.items() %}
+export {{key}}='{{value}}'
+{% endfor %}
+{% endif %}
