@@ -1,0 +1,12 @@
+---
+
+- name: Install uwsgi
+  sudo: yes
+  apt:
+    name: "{{ uwsgi_package.name }}"
+    state: present
+  register: install_uwsgi
+  when: uwsgi_package is defined
+  tags:
+    - apt
+    - uwsgi
