@@ -60,7 +60,6 @@ Please see [CONTRIBUTING](CONTRIBUTING.md) for details.
 - [Luis Mayta][link-luis]
 - [All Contributors][link-contributors]
 
-
 <!-- Other -->
 
 [link-uwsgi]: https://www.uwsgi.com
