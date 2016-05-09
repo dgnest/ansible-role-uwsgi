@@ -1,9 +1,29 @@
 ---
 
 # vars file for uwsgi
+_uwsgi:
+  dir:
+    run: "{{ uwsgi_dir_home }}/run"
 
 _uwsgi_templates:
     - src: "uwsgi.ini.j2"
       dest: "{{ uwsgi_dir_home }}/{{ uwsgi_name }}.ini"
     - src: "uwsgi.sh.j2"
       dest: "{{ uwsgi_dir_home }}/uwsgi.sh"
+
+_uwsgi_create_files:
+    - path: "{{ _uwsgi.dir.run }}"
+      state: "directory"
+      owner: "{{ user }}"
+
+_uwsgi_package_dependencies:
+    - "libpcre3"
+    - "libpcre3-dev"
+
+# _uwsgi_package:
+#     name: "uwsgi"
+#     version: ""
+
+# _uwsgi_pip_dependencies:
+#     - name: "uWSGI"
+#       version: "2.0.11.2"
