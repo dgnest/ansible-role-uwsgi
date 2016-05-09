@@ -1,11 +1,11 @@
 ---
 
 # vars file for uwsgi
+
 _uwsgi:
   dir:
     run: "{{ uwsgi_dir_home }}/run"
-
-_uwsgi_templates:
+  templates:
     - src: "uwsgi.ini.j2"
       dest: "{{ uwsgi_dir_home }}/{{ uwsgi_name }}.ini"
     - src: "uwsgi.sh.j2"
