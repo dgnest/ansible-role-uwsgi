@@ -1,7 +1,6 @@
 [uwsgi]
-
 log-format = %(addr) - %(user) [%(ltime)] "%(method) %(uri) %(proto)" %(status) %(size) %(pid) %(msecs) "%(referer)" "%(uagent)"
-pidfile = "{{ _uwsgi.dir.run }}/{{ uwsgi_pid_file }}.pid"
+pidfile = "{{ _uwsgi.dir.run }}/{{ uwsgi_name }}.pid"
 {% if uwsgi_dict %}
 {% for key,value in uwsgi_dict.items() %}
 {{key}}='{{value}}'

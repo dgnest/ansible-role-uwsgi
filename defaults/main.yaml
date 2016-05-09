@@ -4,7 +4,6 @@
 uwsgi_name: "uwsgi"
 uwsgi_dir_home: "/home/{{ user }}"
 uwsgi_file_load_virtualenvwrapper: "{{ uwsgi_dir_home }}/.pyenvrunrc"
-uwsgi_pid_file: "{{ uwsgi_name }}.pid"
 
 # uwsgi_pip_dependencies:
 #   - name: "uWSGI"
