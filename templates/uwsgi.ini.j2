@@ -1,7 +1,8 @@
 [uwsgi]
 
+log-format = %(addr) - %(user) [%(ltime)] "%(method) %(uri) %(proto)" %(status) %(size) %(pid) %(msecs) "%(referer)" "%(uagent)"
 {% if uwsgi_dict %}
 {% for key,value in uwsgi_dict.items() %}
-export {{key}}='{{value}}'
+{{key}}='{{value}}'
 {% endfor %}
 {% endif %}

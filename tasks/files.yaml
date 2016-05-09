@@ -5,5 +5,5 @@
     path: "{{ item.path }}"
     state: "{{ item.state }}"
     owner: "{{ item.owner }}"
-  with_items: uwsgi_create_files
-  when: uwsgi_create_files is defined
+  with_items: _uwsgi_create_files
+  when: _uwsgi_create_files is defined
