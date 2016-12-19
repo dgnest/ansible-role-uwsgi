@@ -1,7 +1,7 @@
 ---
 
 - name: Install uwsgi
-  sudo: yes
+  become: true
   apt:
     name: "{{ uwsgi_package.name }}"
     state: present
