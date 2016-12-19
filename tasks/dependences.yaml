@@ -15,7 +15,7 @@
     state: present
   register: install_uwsgi_package_dependencies
   when: uwsgi_package_dependencies is defined
-  with_items: uwsgi_package_dependencies
+  with_items: "{{ uwsgi_package_dependencies | defaul([]) }}"
   tags:
     - apt
     - dependencies
@@ -28,7 +28,7 @@
     state: present
   register: install_uwsgi_dependencies
   when: uwsgi_dependencies is defined
-  with_items: uwsgi_dependencies
+  with_items: "{{ uwsgi_dependencies | defaul({}) }}"
   tags:
     - apt
     - dependencies
