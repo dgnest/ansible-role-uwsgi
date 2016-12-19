@@ -1,7 +1,7 @@
 ---
 
 - name: Update package repositories
-  sudo: yes
+  become: true
   apt:
     update_cache: True
   tags:
@@ -9,26 +9,26 @@
     - update_cache
 
 - name: Install uwsgi package dependencies
-  sudo: yes
+  become: true
   apt:
     name: "{{ item }}"
     state: present
   register: install_uwsgi_package_dependencies
   when: uwsgi_package_dependencies is defined
-  with_items: uwsgi_package_dependencies
+  with_items: "{{ uwsgi_package_dependencies | defaul([]) }}"
   tags:
     - apt
     - dependencies
 - debug: var=install_uwsgi_package_dependencies.stdout_lines
 
 - name: Install uwsgi dependencies
-  sudo: yes
+  become: true
   apt:
     name: "{{ item.name }}"
     state: present
   register: install_uwsgi_dependencies
   when: uwsgi_dependencies is defined
-  with_items: uwsgi_dependencies
+  with_items: "{{ uwsgi_dependencies | defaul({}) }}"
   tags:
     - apt
     - dependencies
