@@ -3,5 +3,5 @@
 - name: Install packages via pip
   become: true
   pip: name="{{ item.name }}" version="{{ item.version }}"
-  when: uwsgi_pip_dependencies is defined
   with_items: "{{ uwsgi_pip_dependencies | default({}) }}"
+  when: uwsgi_pip_dependencies is defined

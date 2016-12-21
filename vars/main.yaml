@@ -16,13 +16,11 @@ _uwsgi_create_files:
       state: "directory"
       owner: "{{ user }}"
 
-_uwsgi_package_dependencies:
+_uwsgi_packages:
     - "libpcre3"
     - "libpcre3-dev"
 
-# _uwsgi_package:
-#     name: "uwsgi"
-#     version: ""
+_uwsgi_package_name: "uwsgi"
 
 # _uwsgi_pip_dependencies:
 #     - name: "uWSGI"

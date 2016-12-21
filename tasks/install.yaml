@@ -2,11 +2,10 @@
 
 - name: Install uwsgi
   become: true
-  apt:
-    name: "{{ uwsgi_package.name }}"
+  package:
+    name: "{{ _uwsgi_package_name }}"
     state: present
   register: install_uwsgi
-  when: uwsgi_package is defined
+  when: _uwsgi_package_name is defined
   tags:
-    - apt
     - uwsgi
