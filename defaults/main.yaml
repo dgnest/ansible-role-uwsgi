@@ -2,7 +2,8 @@
 # defaults file for uwsgi
 
 uwsgi_name: "uwsgi"
-uwsgi_dir_home: "/home/{{ user }}"
+uwsgi_user: ""
+uwsgi_dir_home: ""
 uwsgi_file_load_virtualenvwrapper: "{{ uwsgi_dir_home }}/.pyenvrunrc"
 
 # uwsgi_pip_dependencies:
