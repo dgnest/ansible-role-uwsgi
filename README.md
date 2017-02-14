@@ -1,9 +1,9 @@
 # Ansible Role Uwsgi
 
 <span class="badges" align="center">
-[![Build Status](https://travis-ci.org/hadenlabs/ansible-role-uwsgi.svg)](https://travis-ci.org/hadenlabs/ansible-role-uwsgi)
-[![Stories in Ready](https://badge.waffle.io/hadenlabs/ansible-role-uwsgi.svg?label=ready&title=Ready)](http://waffle.io/hadenlabs/ansible-role-uwsgi)
-[![GitHub issues](https://img.shields.io/github/issues/hadenlabs/ansible-role-uwsgi.svg)](https://github.com/hadenlabs/ansible-role-uwsgi/issues)
+[![Build Status](https://travis-ci.org/dgnest/ansible-role-uwsgi.svg)](https://travis-ci.org/dgnest/ansible-role-uwsgi)
+[![Stories in Ready](https://badge.waffle.io/dgnest/ansible-role-uwsgi.svg?label=ready&title=Ready)](http://waffle.io/dgnest/ansible-role-uwsgi)
+[![GitHub issues](https://img.shields.io/github/issues/dgnest/ansible-role-uwsgi.svg)](https://github.com/dgnest/ansible-role-uwsgi/issues)
 [![GitHub license](https://img.shields.io/github/license/mashape/apistatus.svg?style=flat-square)](LICENSE)
 </span>
 
@@ -44,7 +44,7 @@ To install a specific version:
 
     - hosts: servers
       roles:
-         - { role: hadenlabs.uwsgi }
+         - { role: dgnest.uwsgi }
 
 
 ## Changelog

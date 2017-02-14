@@ -14,14 +14,10 @@ _uwsgi:
 _uwsgi_create_files:
     - path: "{{ _uwsgi.dir.run }}"
       state: "directory"
-      owner: "{{ user }}"
+      owner: "{{ uwsgi_user }}"
 
 _uwsgi_packages:
     - "libpcre3"
     - "libpcre3-dev"
 
 _uwsgi_package_name: "uwsgi"
-
-# _uwsgi_pip_dependencies:
-#     - name: "uWSGI"
-#       version: "2.0.11.2"
