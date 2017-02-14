@@ -28,9 +28,7 @@ uwsgi_file_load_virtualenvwrapper: "{{ uwsgi_dir_home }}/.pyenvrunrc"
 #   threads: 2
 #   enable_threads: true
 #   # http: ":3097"
-#   pidfile: "{{ uwsgi_dir.run }}/{{ app_name }}.pid"
 #   # touch_reload: "/path/touch/reload"
-#   # daemonize: "{{ uwsgi_dir.run }}/{{ app_name }}.log"
 #   # harakiri: 30
 #   # harakiri_verbose: True
 #   log_x_forwarded_for: true

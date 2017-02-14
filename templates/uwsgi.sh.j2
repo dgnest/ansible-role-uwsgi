@@ -2,8 +2,7 @@
 
 echo "Starting uwsgi"
 
-
+# shellcheck source=/dev/null
 source {{ uwsgi_file_load_virtualenvwrapper }}
-# cd {{ app_dir }}
 
 exec uwsgi --ini {{ uwsgi_dir_home }}/{{ uwsgi_name }}.ini
