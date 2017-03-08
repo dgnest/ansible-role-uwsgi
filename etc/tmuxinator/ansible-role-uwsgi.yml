@@ -34,44 +34,35 @@ windows:
       panes:
         - editor:
             - pyenv activate ansible-role-uwsgi
-            - gvm pkgset use ansible-role-uwsgi
             - <%= ENV["EDITOR"] %>
         - docker:
             - pyenv activate ansible-role-uwsgi
-            - gvm pkgset use ansible-role-uwsgi
   - python:
       layout: main-vertical
       panes:
         - python:
             - pyenv activate ansible-role-uwsgi
-            - gvm pkgset use ansible-role-uwsgi
             - ipython
   - databases:
       layout: main-vertical
       panes:
         - postgresql:
             - pyenv activate ansible-role-uwsgi
-            - gvm pkgset use ansible-role-uwsgi
         - shell:
             - pyenv activate ansible-role-uwsgi
-            - gvm pkgset use ansible-role-uwsgi
   - docker:
       layout: main-vertical
       panes:
         - docker:
             - pyenv activate ansible-role-uwsgi
-            - gvm pkgset use ansible-role-uwsgi
         - shell:
             - pyenv activate ansible-role-uwsgi
-            - gvm pkgset use ansible-role-uwsgi
   - tools:
       layout: main-vertical
       panes:
         - watch:
             - pyenv activate ansible-role-uwsgi
-            - gvm pkgset use ansible-role-uwsgi
             - make watch
         - grip:
             - pyenv activate ansible-role-uwsgi
-            - gvm pkgset use ansible-role-uwsgi
             - make grip
